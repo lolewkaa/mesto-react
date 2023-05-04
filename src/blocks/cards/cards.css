@@ -1,6 +1,6 @@
 .cards {
   max-width: 880px;
-  margin: 51px 200px 0 200px;
+  margin: 51px auto 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 20px;
@@ -26,6 +26,6 @@
 
 @media screen and (max-width: 320px) {
   .cards {
-    margin: 0 19px 48px 19px;
+    margin: 0 auto 48px auto;
   }
 }

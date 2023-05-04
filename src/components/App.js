@@ -6,7 +6,7 @@ import PopupWithForm from './PopupWithForm';
 import EditProfilePopup from './EditProfilePopup';
 import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
-import PopupWithImage from './PopupWithImage';
+import ImagePopup from './ImagePopup';
 function App() {
   const [selectedCard, setSelectedCard] = React.useState({})
 
@@ -57,7 +57,7 @@ function App() {
     isOpen={isAddPlacePopupOpen}
     onClose={closeAllPopups}
     />
-    <PopupWithImage
+    <ImagePopup
     card={selectedCard}
     isOpen={isImagePopupOpen}
     onClose={closeAllPopups}

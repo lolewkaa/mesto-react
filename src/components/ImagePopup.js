@@ -1,7 +1,7 @@
 import React from "react";
 import closeIcon from '../images/CloseIcon.svg'
 
-export default function PopupWithImage({ card, isOpen, onClose}) {
+export default function ImagePopup({ card, isOpen, onClose}) {
     return(
     <div className={`popup popup_type_image ${isOpen ? 'popup_opened' : ""}`}>
         <div className="popup__container-image">
