@@ -9,7 +9,7 @@ export default function ImagePopup({ card, isOpen, onClose}) {
             <img className="popup__img-close" src={closeIcon} alt="Кнопка 'Закрыть'" />
           </button>
           <img className="popup__image" alt={card.name} src={card.link} />
-          <h2 className="popup__title"></h2>
+          <h2 className="popup__title">{card.name}</h2>
         </div>
       </div>
     )

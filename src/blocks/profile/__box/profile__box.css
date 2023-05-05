@@ -4,7 +4,18 @@
   position: relative;
 }
 
-
+.profile__box:hover .profile__avatar-change{
+  display: block;
+  width: 26px;
+    height: 26px;
+    z-index: 1;
+    bottom: 47px;
+  left: 47px;
+  position: absolute;
+}
+.profile__box:hover .profile__avatar {
+  opacity: 0.2;
+}
 
 @media screen and (max-width: 320px) {
   .profile__box {

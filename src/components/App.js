@@ -7,7 +7,13 @@ import EditProfilePopup from './EditProfilePopup';
 import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
 import ImagePopup from './ImagePopup';
+
+
+
+
 function App() {
+
+
   const [selectedCard, setSelectedCard] = React.useState({})
 
   const [isImagePopupOpen, setisImagePopupOpen] = React.useState(false)
