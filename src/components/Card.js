@@ -18,7 +18,7 @@ export default function Card({card, onCardClick, onCardLike, onCardDelete}) {
             <div className="card__container">
               <h2 className="card__description">{card.name}</h2>
               <div className="card__box">
-                <button className={cardLikeButtonClassName} onClick={handleLikeClick} type="button"></button>
+                <button className={cardLikeButtonClassName} onClick={handleLikeClick} type="button"/>
                 <h2 className="card__page-lakes"></h2>
               </div>
             </div>
