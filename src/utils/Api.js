@@ -61,19 +61,35 @@ deleteCard(cardId){
 }).then(res => this._chekResult(res))
 }
 
-likeCard(cardId){
-  return fetch(`${this._address}/cards/${cardId}/likes`, {
-    method: 'PUT',
-    headers: this._headers,
-  }).then(res => this._chekResult(res))
-}
+changeLike(cardId, isLiked) {
+  if (isLiked) {
+    return fetch(`${this._address}/cards/${cardId}/likes`, {
+          method: 'DELETE',
+          headers: this._headers,
+        }).then(res => this._chekResult(res))
+      }
+        else {
+          return fetch(`${this._address}/cards/${cardId}/likes`, {
+                method: 'PUT',
+                headers: this._headers,
+              }).then(res => this._chekResult(res))
+        }
+  }
 
-deleteLikeCard(cardId){
-  return fetch(`${this._address}/cards/${cardId}/likes`, {
-    method: 'DELETE',
-    headers: this._headers,
-  }).then(res => this._chekResult(res))
-}
+
+// likeCard(cardId){
+//   return fetch(`${this._address}/cards/${cardId}/likes`, {
+//     method: 'PUT',
+//     headers: this._headers,
+//   }).then(res => this._chekResult(res))
+// }
+
+// deleteLikeCard(cardId){
+//   return fetch(`${this._address}/cards/${cardId}/likes`, {
+//     method: 'DELETE',
+//     headers: this._headers,
+//   }).then(res => this._chekResult(res))
+// }
 
 changeAvatar(data) {
  return fetch(`${this._address}/users/me/avatar`, {

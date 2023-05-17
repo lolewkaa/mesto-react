@@ -1,11 +1,11 @@
 import React from "react";
 import closeIcon from '../images/CloseIcon.svg'
 
-export default function PopupWithForm({name, title, isOpen, onClose, children, textSubmit}) {
+export default function PopupWithForm({name, title, isOpen, onClose, children, textSubmit, onSubmit}) {
     return (
         <div className={`popup popup_type_${name} ${isOpen ? 'popup_opened' : ""}`}>
         <div className="popup__container">
-          <form className={`form form_type_${name}`} name={`${name}`} noValidate>
+          <form className={`form form_type_${name}`} name={`${name}`} onSubmit={onSubmit} noValidate>
             <button className="popup__button popup__button_type_user" type="reset" onClick={onClose}>
             <img className="popup__img-close" src={closeIcon} alt="Кнопка 'Закрыть'" />
             </button>
